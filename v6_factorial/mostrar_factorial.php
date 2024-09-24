@@ -9,23 +9,13 @@ require 'calcular_factorial.php'
         <title>Factorial del 1 al 10</title>
     </head>
     <body>
-        <table>
-            <tr>
-                <td>Numero</td>
-                <td>Factorial</td>
-            </tr>
         <?php
-            for($i=0;$i<=10;$i++){
+            for($i=0;$i<10;$i++){
                 $array[$i]=calcularFactorial($i);
             }
-            print_r($array);
-            for($i=0;$i<count($array);$i++){
-                echo "<tr>";
-                echo "<td>".$i."</td>";
-                echo "<td>".$array[$i]."</td>";
-                echo "</tr>";
+            foreach ($array as $i=>$valor){
+                echo $i." ".$valor."<br/>";
             }
         ?>
-        </table>
     </body>
 </html> 
